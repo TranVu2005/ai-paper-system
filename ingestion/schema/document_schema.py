@@ -78,6 +78,7 @@ class UnifiedDocument:
 
     # Content
     abstract: str = ""
+    full_text: str = ""  # raw OCR text — dùng cho LM metadata extraction
     sections: list[Section] = field(default_factory=list)
     tables: list[Table] = field(default_factory=list)
     figures: list[Figure] = field(default_factory=list)
