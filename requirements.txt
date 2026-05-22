@@ -1,0 +1,20 @@
+# Core dependencies
+PyMuPDF>=1.23.0
+Pillow>=10.0.0
+requests>=2.31.0
+neo4j>=5.0.0
+
+# OCR engines (choose one or both)
+paddleocr>=2.7.0
+# pytesseract>=0.3.10
+
+# Optional: DOCX/HTML support
+python-docx>=1.1.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Optional: file type detection
+# python-magic>=0.4.27
+
+# Data processing
+numpy>=1.24.0

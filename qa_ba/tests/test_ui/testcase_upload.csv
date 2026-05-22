@@ -1,0 +1,25 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+NOTEBOOK_01,Hiển thị giao diện,Kiểm tra màn hình notebook mới,Đã tạo notebook mới,Mở notebook,Không,"Hiển thị tên notebook, panel Nguồn tài liệu, panel Cuộc trò chuyện, panel Tóm tắt"
+NOTEBOOK_02,Tiêu đề notebook,Hiển thị tên notebook mặc định,Notebook mới,Mở notebook,Không,Tên mặc định hiển thị là “Untitled notebook”
+NOTEBOOK_03,Trạng thái chưa có nguồn,Kiểm tra notebook mới chưa có file,Notebook mới,Mở notebook,Không,"Hiển thị 0 nguồn, ô chat trạng thái Chưa chọn nguồn, phần tóm tắt báo chưa có nội dung"
+NOTEBOOK_04,Reset layout,Bấm nút Reset layout,Đã thay đổi kích thước hoặc vị trí layout nếu hỗ trợ,Click Reset layout,Không,Giao diện trở về bố cục mặc định
+NOTEBOOK_05,Icon tài khoản,Bấm icon người dùng,Đã đăng nhập,Click icon người dùng,Không,Mở menu hồ sơ/tài khoản theo thiết kế
+NOTEBOOK_06,Thanh cuộn,Kiểm tra khả năng cuộn khi nội dung dài,Nội dung vượt chiều cao,Cuộn màn hình,Không,"Trang cuộn bình thường, không che mất thao tác chính"
+SOURCE_01,Thêm nguồn,Bấm nút “Thêm nguồn” ở panel trái,Đang ở notebook,Click Thêm nguồn,Không,Mở giao diện chọn/tải tài liệu
+SOURCE_02,Thêm nguồn,Bấm nút “Thêm nguồn” trên header,Đang ở notebook,Click nút Thêm nguồn phía trên,Không,Mở giao diện chọn/tải tài liệu
+SOURCE_03,Upload PDF,Tải lên file PDF hợp lệ,Đang ở giao diện thêm nguồn,Chọn file,document.pdf,File được tải lên và bắt đầu xử lý
+SOURCE_04,Upload PDF,Tải lên file .docx,Đang ở giao diện thêm nguồn,Chọn file không phải PDF,document.docx,"Hệ thống từ chối, hiển thị thông báo chỉ hỗ trợ PDF"
+SOURCE_05,Upload PDF,Tải lên file .txt,Đang ở giao diện thêm nguồn,Chọn file,note.txt,"Hệ thống từ chối, hiển thị thông báo chỉ hỗ trợ PDF"
+SOURCE_06,Upload PDF,Tải lên file ảnh,Đang ở giao diện thêm nguồn,Chọn file,image.png,"Hệ thống từ chối, hiển thị thông báo chỉ hỗ trợ PDF"
+SOURCE_07,Upload PDF,Tải lên file có đuôi PDF nhưng nội dung lỗi,Đang ở giao diện thêm nguồn,Chọn file giả PDF hoặc hỏng,.pdf,Hệ thống báo file lỗi/không thể xử lý
+SOURCE_08,Upload PDF,Tải lên file PDF trống,Đang ở giao diện thêm nguồn,Chọn file PDF không có nội dung,.pdf,Hệ thống xử lý theo thiết kế; nên báo không tìm thấy nội dung
+SOURCE_09,Upload PDF,Tải lên PDF dung lượng lớn,Có giới hạn dung lượng nếu hệ thống quy định,Chọn file lớn,.pdf,"Nếu vượt giới hạn, hệ thống báo lỗi phù hợp"
+SOURCE_10,Upload PDF,Tải file PDF hợp lệ nhiều trang,Đang ở giao diện thêm nguồn,Chọn file PDF nhiều trang,.pdf,File được thêm và xử lý thành công
+SOURCE_11,Upload PDF,Kiểm tra trạng thái xử lý tài liệu,Vừa upload PDF,Quan sát giao diện,Không,Hiển thị thông báo đang xử lý / trạng thái loading nếu có
+SOURCE_12,Upload PDF,"Sau xử lý hoàn tất, cập nhật số nguồn",File PDF xử lý thành công,Quan sát notebook,Không,Số nguồn tăng từ 0 lên 1
+SOURCE_13,Upload PDF,"Sau xử lý hoàn tất, file xuất hiện danh sách nguồn",File PDF xử lý thành công,Quan sát panel trái,Không,Tên file xuất hiện trong danh sách nguồn
+SOURCE_14,Upload nhiều file,Tải lần lượt nhiều PDF hợp lệ,Đang ở notebook,Upload nhiều PDF,"a.pdf, b.pdf",Danh sách nguồn cập nhật đúng số lượng
+SOURCE_15,Upload trùng,Tải lại cùng một file PDF,File đã tồn tại,Upload file giống trước đó,.pdf,Hệ thống xử lý theo thiết kế: cho phép thêm hoặc cảnh báo trùng
+SOURCE_16,Lỗi mạng,Mất kết nối khi upload PDF,Đang upload,Ngắt mạng,Không,"Hiển thị thông báo lỗi, không treo giao diện"
+SOURCE_17,Tìm nguồn,Tìm kiếm trong danh sách nguồn,Có nhiều nguồn PDF,Nhập tên file vào ô “Tìm trong nguồn đã tải”,Một phần tên PDF,Hiển thị kết quả phù hợp
+SOURCE_18,Tìm nguồn,Không có kết quả tìm nguồn,Có nguồn nhưng không trùng từ khóa,Nhập từ khóa lạ,xyz,Hiển thị trạng thái không có kết quả

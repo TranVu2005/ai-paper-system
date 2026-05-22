@@ -1,0 +1,20 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+HOME_01,Hiển thị giao diện,Kiểm tra các thành phần trang chủ,Đã đăng nhập,Truy cập trang chủ,Không,"Hiển thị logo PaperMind, thanh tìm kiếm, nút Tạo mới, danh sách sổ ghi chú gần đây, icon tài khoản"
+HOME_02,Danh sách,Hiển thị thẻ “Tạo sổ ghi chú mới”,Đã đăng nhập,Mở trang chủ,Không,Card tạo mới được hiển thị
+HOME_03,Danh sách,Hiển thị card sổ ghi chú đã tồn tại,Có sổ ghi chú trong tài khoản,Mở trang chủ,Không,"Hiển thị tiêu đề, thời gian, số lượng nguồn, nút ba chấm"
+HOME_04,Tạo mới,Tạo sổ ghi chú từ card “Tạo sổ ghi chú mới”,Đã đăng nhập,Click card tạo mới,Không,Chuyển sang trang notebook mới
+HOME_05,Tạo mới,Tạo sổ ghi chú bằng nút “Tạo mới”,Đã đăng nhập,Click nút Tạo mới,Không,Chuyển sang trang notebook mới
+HOME_06,Mở notebook,Click vào một sổ ghi chú có sẵn,Có notebook tồn tại,Click card notebook,Không,Chuyển vào trang chi tiết notebook tương ứng
+HOME_07,Tìm kiếm,Tìm kiếm notebook theo tên chính xác,Có notebook trùng từ khóa,Nhập từ khóa vào ô tìm kiếm,Tên notebook,Danh sách hiển thị kết quả phù hợp
+HOME_08,Tìm kiếm,Tìm kiếm notebook theo một phần tên,Có notebook phù hợp,Nhập một phần tiêu đề,khảo sát,Hiển thị notebook chứa từ khóa
+HOME_09,Tìm kiếm,Tìm kiếm không có kết quả,Không có notebook phù hợp,Nhập từ khóa không tồn tại,abcdefxyz,Hiển thị trạng thái không có kết quả
+HOME_10,Tìm kiếm,Xóa từ khóa tìm kiếm,Đang có kết quả lọc,Xóa toàn bộ nội dung ô tìm kiếm,Trống,Hiển thị lại toàn bộ danh sách notebook
+HOME_11,Menu ba chấm,Mở menu thao tác trên notebook,Có notebook,Click biểu tượng ba chấm,Không,Hiển thị danh sách hành động theo thiết kế
+HOME_12,Menu ba chấm,Đóng menu khi click ra ngoài,Menu đang mở,Click ra vùng trống,Không,Menu đóng lại
+HOME_13,Menu ba chấm,Kiểm tra chức năng đổi tên nếu có,Menu notebook hỗ trợ Rename,Chọn sửa tên,Tên mới,Đổi tên notebook thành công
+HOME_14,Menu ba chấm,Kiểm tra chức năng xóa nếu có,Menu notebook hỗ trợ Delete,Chọn xóa và xác nhận,Không,Notebook bị xóa khỏi danh sách
+HOME_15,Icon tài khoản,Click icon tài khoản,Đã đăng nhập,Click icon người dùng,Không,Hiển thị menu tài khoản hoặc trang hồ sơ theo thiết kế
+HOME_16,Phiên đăng nhập,Người chưa đăng nhập truy cập trang chủ,Chưa đăng nhập,Truy cập URL trang chủ,Không,Bị chuyển đến trang đăng nhập
+HOME_17,UI,Kiểm tra tiêu đề dài trên card,Có notebook tên dài,Quan sát card,Tiêu đề dài,"Tiêu đề được rút gọn bằng dấu ..., không phá layout"
+HOME_18,UI,Kiểm tra số nguồn hiển thị đúng,Notebook có nguồn tài liệu,Quan sát card,"1 nguồn, 2 nguồn...",Số nguồn hiển thị đúng
+HOME_19,Responsive,Trang chủ khi thu nhỏ màn hình,Đã đăng nhập,Thu nhỏ trình duyệt,Không,"Các thành phần vẫn sử dụng được, card không vỡ bố cục"

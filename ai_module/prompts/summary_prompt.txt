@@ -1,0 +1,256 @@
+[[HIGEN_HIGHLIGHT]]
+You are an expert at identifying key information in scientific papers.
+Given the following document:
+{document}
+Extract {num_highlights} important sentences that represent the core content of the paper.
+Hard constraints:
+- Use ONLY information explicitly present in the document.
+- Do NOT infer, guess, or add external knowledge.
+- Do NOT introduce methods, models, datasets, metrics, or applications that are not explicitly stated.
+- If limitation evidence exists, include at least one limitation sentence.
+Focus on:
+- research problem
+- proposed method
+- model architecture
+- dataset
+- experiment setup
+- results
+- limitations
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+Output format:
+- A numbered list only.
+
+[[HIGEN_SUMMARY]]
+You are an expert scientific paper summarizer.
+Given the following key sentences:
+{highlights}
+Write a clear and structured Vietnamese summary.
+The summary should primarily use information from the key sentences.
+Avoid adding unsupported information.
+Length target:
+- Aim for approximately 450-700 words in total.
+- Each section should have at least 3-5 sentences when evidence is available.
+Hard constraints:
+- Prioritize information explicitly present in key sentences.
+- You may paraphrase and lightly synthesize closely related evidence across multiple key sentences.
+- Do NOT introduce a completely new method, model, dataset, metric, or application domain without evidence.
+- If direct evidence is weak, write a cautious statement (e.g., "co dau hieu", "co the", "chua ro rang").
+- Map evidence to sections using keyword hints below.
+- Section 5 is a concise conclusion synthesized from explicit evidence in key sentences.
+- If evidence for a section is limited, still provide a brief cautious sentence instead of leaving it empty.
+Section keyword hints:
+- 1. V?n ?? nghi?n c?u: van de, bai toan, muc tieu, dong co, boi canh, thach thuc, nhu cau, objective, motivation, challenge, problem
+- 2. Ph??ng ph?p ?? xu?t: phuong phap, de xuat, mo hinh, thuat toan, framework, approach, method, model, algorithm, rsbs, lagrange
+- 3. C?ch tri?n khai: trien khai, thiet lap, cai dat, tham so, du lieu, thi nghiem, mo phong, quy trinh, setup, implementation, protocol, matlab, fsolve
+- 4. K?t qu?: ket qua, cho thay, dat duoc, hieu qua, cai thien, tang, giam, so sanh, danh gia, ucr, performance, metric, accuracy, f1, precision, recall
+- 5. K?t lu?n: ket luan, tong ket, nhin chung, cho thay, khang dinh, xac nhan, dong gop, y nghia, overall, conclusion, conclude
+Use this structure:
+1. V?n ?? nghi?n c?u
+2. Ph??ng ph?p ?? xu?t
+3. C?ch tri?n khai
+4. K?t qu?
+5. K?t lu?n
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+
+[[HIGEN_SUMMARY_ACADEMIC]]
+You are an expert scientific paper summarizer.
+Given the following key sentences:
+{highlights}
+Write a clear, formal Vietnamese academic summary.
+The summary should primarily use information from the key sentences.
+Avoid adding unsupported information.
+Length target:
+- Aim for approximately 500-800 words in total.
+- Each section should have at least 4-6 sentences when evidence is available.
+Hard constraints:
+- Prioritize information explicitly present in key sentences.
+- You may paraphrase and lightly synthesize closely related evidence across multiple key sentences.
+- Do NOT introduce a completely new method, model, dataset, metric, or application domain without evidence.
+- If direct evidence is weak, write a cautious statement (e.g., "co dau hieu", "co the", "chua ro rang").
+- Map evidence to sections using keyword hints below.
+- Section 5 is a concise conclusion synthesized from explicit evidence in key sentences.
+- If evidence for a section is limited, still provide a brief cautious sentence instead of leaving it empty.
+Section keyword hints:
+- 1. V?n ?? nghi?n c?u: van de, bai toan, muc tieu, dong co, boi canh, thach thuc, nhu cau, objective, motivation, challenge, problem
+- 2. Ph??ng ph?p ?? xu?t: phuong phap, de xuat, mo hinh, thuat toan, framework, approach, method, model, algorithm, rsbs, lagrange
+- 3. C?ch tri?n khai: trien khai, thiet lap, cai dat, tham so, du lieu, thi nghiem, mo phong, quy trinh, setup, implementation, protocol, matlab, fsolve
+- 4. K?t qu?: ket qua, cho thay, dat duoc, hieu qua, cai thien, tang, giam, so sanh, danh gia, ucr, performance, metric, accuracy, f1, precision, recall
+- 5. K?t lu?n: ket luan, tong ket, nhin chung, cho thay, khang dinh, xac nhan, dong gop, y nghia, overall, conclusion, conclude
+Use this structure:
+1. V?n ?? nghi?n c?u
+2. Ph??ng ph?p ?? xu?t
+3. C?ch tri?n khai
+4. K?t qu?
+5. K?t lu?n
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+
+[[HIGEN_SUMMARY_SEMANTIC]]
+You are a semantic scientific summarizer.
+Given the following key sentences:
+{highlights}
+Write Vietnamese summary focusing on meaning and logical relations.
+Do not add new information.
+Length target:
+- Aim for approximately 300-500 words in total.
+- Each section should have at least 3-4 sentences when evidence is available.
+Hard constraints:
+- Prioritize information explicitly present in key sentences.
+- Do NOT introduce a completely new method, model, dataset, metric, or application domain without evidence.
+- If a relation (cause/effect/comparison) is not explicit, you may state it cautiously as a possible relation.
+- Use keyword hints below to detect relation signals.
+- If evidence is limited, provide a short cautious note instead of empty output.
+Relation keyword hints:
+- nguyen nhan: boi vi, do, dan den, vi vay, nguyen nhan, cause, due to
+- doi chieu: trong khi, tuy nhien, trai lai, so voi, doi chieu, compared to, whereas
+- he qua: ket qua, tac dong, cai thien, suy giam, he qua, effect, impact
+- han che: han che, gioi han, chua, chua duoc, chua khao sat, can tiep tuc nghien cuu, limitation, future work
+Use this structure:
+1. Ý chính
+2. Quan hệ nghĩa (nguyên nhân, đối chiếu, hệ quả)
+3. Hàm ý ứng dụng
+Output template (must follow exactly heading lines):
+1. Ý chính
+- ...
+
+2. Quan hệ nghĩa (nguyên nhân, đối chiếu, hệ quả)
+- ...
+
+3. Hàm ý ứng dụng
+- ...
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+- Keep each heading on a separate line exactly as written above.
+- Do NOT write content on the same line as heading.
+
+[[HIGEN_SUMMARY_EXECUTIVE]]
+You are an executive-level scientific summarizer.
+Given the following key sentences:
+{highlights}
+Write concise Vietnamese summary for decision-makers.
+Do not add new information.
+Length target:
+- Aim for approximately 250-450 words in total.
+- Each section should have at least 2-4 bullet lines when evidence is available.
+Hard constraints:
+- Prioritize information explicitly present in key sentences.
+- Do NOT introduce a completely new method, model, dataset, metric, or application domain without evidence.
+- Recommendations may be stated as cautious next steps when supported by partial but relevant evidence.
+- Use keyword hints below to map executive sections.
+- If evidence is limited, provide a short cautious note instead of empty output.
+Section keyword hints:
+- Kết luận chính: ket qua chinh, dong gop, phat hien chinh, key finding, main result
+- Bằng chứng: so lieu, chi so, metric, danh gia, so sanh, bang chung, evidence
+- Rủi ro / hạn chế: han che, gioi han, nhuoc diem, bat cap, chua, chua duoc, uncertainty, risk, limitation
+- Khuyến nghị hành động: de xuat tiep theo, can thuc hien, can tiep tuc nghien cuu, recommendation, action (only if explicit)
+Use this structure:
+1. Kết luận chính (tối đa 3 gạch đầu dòng)
+2. Bằng chứng
+3. Rủi ro / hạn chế
+4. Khuyến nghị hành động
+Output template (must follow exactly heading lines):
+1. Kết luận chính (tối đa 3 gạch đầu dòng)
+- ...
+- ...
+- ...
+
+2. Bằng chứng
+- ...
+
+3. Rủi ro / hạn chế
+- ...
+
+4. Khuyến nghị hành động
+- ...
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+- Keep each heading on a separate line exactly as written above.
+- Do NOT write content on the same line as heading.
+
+[[CHUNK_SUMMARY]]
+You are an expert scientific summarizer.
+Summarize the following text chunk in Vietnamese.
+Focus on key facts, method, experiment, and result.
+Text chunk:
+{chunk}
+Hard constraints:
+- Use ONLY information explicitly present in the text chunk.
+- Do NOT infer, guess, or add external knowledge.
+- Do NOT introduce methods, models, datasets, metrics, or applications not stated in the chunk.
+Keyword hints:
+- problem/objective: van de, bai toan, muc tieu, dong co, objective, problem, challenge
+- method: phuong phap, de xuat, mo hinh, thuat toan, framework, algorithm, method, rsbs, lagrange
+- setup: trien khai, thiet lap, cai dat, du lieu, tham so, thi nghiem, mo phong, implementation, setup, matlab, fsolve
+- result: ket qua, cho thay, dat duoc, danh gia, hieu qua, cai thien, tang, giam, metric, performance, ucr
+- limitation: han che, gioi han, chua, chua duoc, chua khao sat, can tiep tuc nghien cuu, future work, limitation, robustness
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+If information is insufficient, output exactly:
+Khong du du lieu de ket luan.
+
+[[DOCUMENT_SUMMARY]]
+You are an expert at synthesizing scientific content.
+Given these chunk summaries from one paper:
+{chunk_summaries}
+Combine them into a structured Vietnamese summary:
+1. Vấn đề
+2. Phương pháp
+3. Dữ liệu / thực nghiệm
+4. Kết quả
+5. Kết luận
+Remove redundancy and preserve important technical details.
+Hard constraints:
+- Use ONLY information explicitly present in chunk_summaries.
+- Do NOT introduce any new method, model, dataset, metric, or application domain.
+- Use keyword hints below to map evidence into sections.
+- If a section has no evidence, output exactly:
+  Khong du du lieu trong van ban.
+Section keyword hints:
+- Vấn đề: van de, bai toan, muc tieu, dong co, objective, motivation, problem
+- Phương pháp: phuong phap, de xuat, mo hinh, thuat toan, framework, algorithm, method, rsbs, lagrange
+- Dữ liệu / thực nghiệm: du lieu, thiet lap, trien khai, thi nghiem, tham so, setup, experiment, matlab, fsolve
+- Kết quả: ket qua, cho thay, dat duoc, danh gia, hieu qua, cai thien, tang, giam, metric, performance, ucr
+- Kết luận: ket luan, tong ket, nhin chung, cho thay, khang dinh, xac nhan, dong gop, y nghia, overall, conclusion, conclude
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.
+
+[[COLLECTION_SUMMARY]]
+You are an expert in multi-document scientific summarization.
+Given the following summaries of multiple papers:
+{document_summaries}
+Write a final Vietnamese synthesis that:
+- groups papers by similar ideas
+- compares their methods
+- identifies common problems
+- highlights differences
+- suggests how these methods can be combined in one project
+Hard constraints:
+- Use ONLY information explicitly present in document_summaries.
+- Do NOT introduce any new method, model, dataset, metric, or application domain.
+- If a synthesis point is not explicitly supported, omit it.
+Synthesis keyword hints:
+- similar ideas: cung muc tieu, cung bai toan, cung van de, similar objective, same problem
+- method comparison: phuong phap, de xuat, mo hinh, thuat toan, framework, algorithm, method
+- common problems: han che chung, gioi han, chua khao sat, challenge, bottleneck, limitation
+- differences: khac biet, doi chieu, trong khi, tuy nhien, whereas, compared to
+- combine methods: ket hop, lai ghep, bo sung, hybrid, pipeline, integration
+Strict output rules:
+- Output only final answer.
+- Do NOT output Thinking Process, Analysis, Reasoning, or Explanation.
+- Do NOT add any text before or after the answer.

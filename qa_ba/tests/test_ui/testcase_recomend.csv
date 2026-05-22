@@ -1,0 +1,8 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+RECOMMEND_01,Hiển thị,Kiểm tra khu vực Gợi ý tài liệu,Mở notebook,Quan sát panel trái,Không,Hiển thị tiêu đề Gợi ý tài liệu và 2 tab Theo tác giả / Theo method
+RECOMMEND_02,Chưa xử lý xong,Hiển thị trạng thái đang xử lý,File vừa được thêm,Quan sát khu vực gợi ý,Không,Hiển thị “Hệ thống đang xử lý tài liệu. Gợi ý sẽ xuất hiện sau khi xử lý xong.”
+RECOMMEND_03,Theo tác giả,Click tab “Theo tác giả”,Có dữ liệu gợi ý sau xử lý,Bấm tab,Không,Hiển thị danh sách gợi ý tài liệu theo tác giả
+RECOMMEND_04,Theo method,Click tab “Theo method”,Có dữ liệu gợi ý sau xử lý,Bấm tab,Không,Hiển thị danh sách gợi ý theo phương pháp
+RECOMMEND_05,Chuyển tab,Chuyển qua lại giữa 2 tab,Có dữ liệu gợi ý,Click từng tab,Không,"Tab active thay đổi đúng, dữ liệu cập nhật phù hợp"
+RECOMMEND_06,Không có gợi ý,Tài liệu không có recommendation,Xử lý xong PDF,Quan sát,Không,Hiển thị thông báo không có gợi ý phù hợp
+RECOMMEND_07,Lỗi recommendation,Backend lỗi khi sinh gợi ý,Có thể mô phỏng lỗi,Mở notebook,Không,"Hiển thị lỗi thân thiện, không vỡ giao diện"

@@ -1,0 +1,11 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+FORGOT_01,Hiển thị giao diện,Kiểm tra các thành phần màn hình quên mật khẩu,Truy cập trang quên mật khẩu,Mở trang,Không,"Hiển thị logo, tiêu đề Quên mật khẩu, ô Email đăng ký, nút Gửi mã 6 số, link Quay về đăng nhập"
+FORGOT_02,Email,Bỏ trống email,Đang ở trang quên mật khẩu,"Để trống, bấm Gửi mã 6 số",Trống,Hiển thị lỗi yêu cầu nhập email
+FORGOT_03,Email,Nhập email sai định dạng,Đang ở trang quên mật khẩu,"Nhập email sai, bấm gửi",abcgmail.com,Hiển thị thông báo email không hợp lệ
+FORGOT_04,Email,Nhập email đã đăng ký,Email tồn tại trong hệ thống,"Nhập email, bấm Gửi mã 6 số",existing@gmail.com,Hệ thống gửi mã xác thực hoặc chuyển sang bước nhập mã
+FORGOT_05,Email,Nhập email chưa đăng ký,Email không tồn tại,"Nhập email, bấm Gửi mã 6 số",notfound@gmail.com,Hiển thị thông báo không tìm thấy tài khoản hoặc phản hồi bảo mật theo thiết kế
+FORGOT_06,Gửi mã,Kiểm tra chỉ gửi khi email hợp lệ,Đang ở màn hình quên mật khẩu,"Nhập dữ liệu hợp lệ/sai, bấm nút",Email,Chỉ gửi mã khi email hợp lệ
+FORGOT_07,Gửi mã,Bấm nút nhiều lần liên tục,Email hợp lệ,Click nút nhiều lần,existing@gmail.com,Không gửi trùng vô hạn; nút loading/disable hoặc có giới hạn theo thiết kế
+FORGOT_08,Điều hướng,Bấm “Quay về đăng nhập”,Đang ở trang quên mật khẩu,Click link,Không,Chuyển về trang đăng nhập
+FORGOT_09,UI,Kiểm tra focus ô Email,Đang ở màn hình quên mật khẩu,Click vào ô email,Không,Ô có trạng thái focus chuẩn
+FORGOT_10,Responsive,Giao diện quên mật khẩu trên màn hình nhỏ,Thu nhỏ trình duyệt,Quan sát,Không,"Form hiển thị tốt, không chồng lấn"

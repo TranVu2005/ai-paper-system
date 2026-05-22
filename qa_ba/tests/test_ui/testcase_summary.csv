@@ -1,0 +1,9 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+SUMMARY_01,Trạng thái ban đầu,Chưa có nội dung tóm tắt,Notebook mới,Quan sát panel Tóm tắt,Không,Hiển thị “Chưa có nội dung tóm tắt.”
+SUMMARY_02,Academic,Chọn chế độ Academic,Có nguồn PDF đã xử lý,Click Academic,Không,"Tab Academic active, hiển thị tóm tắt dạng học thuật nếu được hỗ trợ"
+SUMMARY_03,Semantic,Chọn chế độ Semantic,Có nguồn PDF đã xử lý,Click Semantic,Không,"Tab Semantic active, hiển thị nội dung tương ứng"
+SUMMARY_04,Executive,Chọn chế độ Executive,Có nguồn PDF đã xử lý,Click Executive,Không,"Tab Executive active, hiển thị nội dung tương ứng"
+SUMMARY_05,Chuyển chế độ,Chuyển giữa Academic/Semantic/Executive,Có tóm tắt,Click từng tab,Không,Nội dung thay đổi đúng theo từng loại tóm tắt
+SUMMARY_06,Tóm tắt sau upload,Sau khi thêm PDF hợp lệ,File xử lý thành công,Quan sát panel Tóm tắt,Không,Tóm tắt được sinh hoặc có thể yêu cầu tạo theo thiết kế
+SUMMARY_07,Không có nội dung,PDF không trích xuất được nội dung,PDF đã được upload nhưng hệ thống không đọc được nội dung,Quan sát panel Tóm tắt,Không,"Panel hiển thị thông báo phù hợp, ví dụ không thể tạo tóm tắt do không trích xuất được nội dung"
+SUMMARY_08,Lỗi sinh tóm tắt,Backend lỗi khi tạo summary,Có nguồn PDF đã xử lý nhưng dịch vụ tóm tắt gặp lỗi,Mở hoặc tạo tóm tắt,Không,"Hiển thị thông báo lỗi thân thiện, giao diện không bị treo"

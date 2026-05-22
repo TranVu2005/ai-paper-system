@@ -1,0 +1,14 @@
+﻿{
+  "train_path": "../../data/rerank/train.jsonl",
+  "val_path": "../../data/rerank/val.jsonl",
+  "test_path": "../../data/rerank/test.jsonl",
+  "model_dir": "../../models/rerank/mlp_v1",
+  "output_dir": "../../outputs/rerank",
+  "batch_size": 8,
+  "epochs": 12,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "hidden_dim": 64,
+  "dropout": 0.1,
+  "seed": 42
+}

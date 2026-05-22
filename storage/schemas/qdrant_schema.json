@@ -1,0 +1,21 @@
+{
+  "collections": [
+    {
+      "name": "document_chunks",
+      "vectors": {
+        "size": 1536,
+        "distance": "Cosine"
+      },
+      "payload_schema": {
+        "document_id": "integer",
+        "chunk_id": "integer",
+        "chunk_index": "integer",
+        "workspace_id": "integer",
+        "user_id": "integer",
+        "file_type": "keyword",
+        "language": "keyword",
+        "created_at": "datetime"
+      }
+    }
+  ]
+}

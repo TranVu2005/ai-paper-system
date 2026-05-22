@@ -1,0 +1,15 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+CHAT_01,Trạng thái ban đầu,Kiểm tra ô chat khi chưa có nguồn,Notebook 0 nguồn,Quan sát ô chat,Không,Hiển thị placeholder “Hỏi về tài liệu này...” và trạng thái “Chưa chọn nguồn”
+CHAT_02,Gửi khi chưa chọn nguồn,Nhập câu hỏi khi chưa chọn nguồn,Chưa chọn nguồn,"Nhập câu hỏi, bấm gửi",“Tài liệu nói về gì?”,Hệ thống không gửi hoặc thông báo cần chọn nguồn
+CHAT_03,Gửi câu hỏi hợp lệ,Gửi câu hỏi khi đã chọn nguồn PDF đã xử lý,Đã có và chọn ít nhất 1 nguồn PDF đã xử lý,"Nhập câu hỏi, bấm gửi",“Tóm tắt nội dung chính của tài liệu”,"Câu hỏi được gửi, hệ thống trả lời"
+CHAT_04,Gửi bằng Enter,Gửi câu hỏi bằng phím Enter,Đã chọn nguồn,Nhập câu hỏi rồi nhấn Enter,Câu hỏi hợp lệ,Hệ thống gửi câu hỏi
+CHAT_05,Gửi bằng icon máy bay,Gửi câu hỏi bằng nút gửi,Đã chọn nguồn,"Nhập câu hỏi, click icon gửi",Câu hỏi hợp lệ,Hệ thống gửi câu hỏi
+CHAT_06,Câu hỏi rỗng,Bấm gửi khi không nhập nội dung,Đã chọn nguồn,"Không nhập gì, bấm gửi",Trống,Không gửi yêu cầu; có cảnh báo hoặc nút gửi bị vô hiệu hóa
+CHAT_07,Chỉ nhập khoảng trắng,Bấm gửi khi chỉ nhập khoảng trắng,Đã chọn nguồn,"Nhập khoảng trắng, bấm gửi",""" """,Không gửi câu hỏi
+CHAT_08,Câu hỏi dài,Gửi câu hỏi có nội dung dài,Đã chọn nguồn,"Nhập câu hỏi dài, bấm gửi",Chuỗi dài,"Hệ thống xử lý, giao diện không bị vỡ"
+CHAT_09,Hiển thị lịch sử chat,Kiểm tra lịch sử hội thoại sau nhiều lượt hỏi đáp,Đã gửi nhiều câu hỏi,Quan sát khu vực hội thoại,Không,Tin nhắn người dùng và phản hồi AI hiển thị đúng thứ tự
+CHAT_10,Loading,Kiểm tra trạng thái tải khi AI đang trả lời,Khi AI đang tạo câu trả lời,Gửi câu hỏi,Không,Hiển thị trạng thái loading hoặc đang phản hồi
+CHAT_11,Lỗi sinh câu trả lời,Kiểm tra thông báo khi backend chat gặp lỗi,Backend chat gặp lỗi,Gửi câu hỏi,Không,"Hiển thị thông báo lỗi, giao diện không bị treo"
+CHAT_12,Câu trả lời liên quan nguồn,Kiểm tra phản hồi khi hỏi thông tin có trong tài liệu,Nguồn PDF đã xử lý,Hỏi về nội dung có trong tài liệu,Câu hỏi cụ thể,AI trả lời bám theo nội dung tài liệu theo thiết kế
+CHAT_13,Câu hỏi ngoài tài liệu,Kiểm tra phản hồi khi hỏi nội dung không có trong PDF,Đã chọn nguồn,Hỏi nội dung không có trong PDF,Câu ngoài phạm vi,"Hệ thống phản hồi phù hợp, ví dụ thông báo không tìm thấy thông tin trong nguồn"
+CHAT_14,Mở menu ba chấm khu chat,Kiểm tra menu hành động ở khu vực chat,Giao diện có biểu tượng ba chấm,Click ba chấm,Không,Mở danh sách hành động nếu được thiết kế

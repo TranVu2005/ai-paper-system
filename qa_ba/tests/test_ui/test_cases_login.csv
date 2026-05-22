@@ -1,0 +1,21 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+LOGIN_01,Hiển thị giao diện,Kiểm tra màn hình đăng nhập hiển thị đầy đủ thành phần,Truy cập trang đăng nhập,Mở trang đăng nhập,Không,"Hiển thị logo PaperMind, tiêu đề Đăng nhập, ô Email, ô Mật khẩu, link Quên mật khẩu, nút Đăng nhập, nút Đăng nhập bằng Gmail, link Đăng ký ngay"
+LOGIN_02,Email,Nhập email hợp lệ,Đang ở màn hình đăng nhập,Nhập email,user@example.com,Email được hiển thị đúng trong ô nhập
+LOGIN_03,Email,Bỏ trống email,Đang ở màn hình đăng nhập,"Để trống email, nhập mật khẩu, bấm Đăng nhập",Email trống,Hiển thị cảnh báo bắt buộc nhập email
+LOGIN_04,Email,Nhập email sai định dạng,Đang ở màn hình đăng nhập,"Nhập email sai, nhập mật khẩu, bấm Đăng nhập",userexample.com,Hiển thị cảnh báo email không hợp lệ
+LOGIN_05,Email,Nhập email có khoảng trắng đầu/cuối,Đang ở màn hình đăng nhập,"Nhập email, bấm Đăng nhập",user@example.com,Hệ thống tự loại bỏ khoảng trắng hoặc báo dữ liệu không hợp lệ theo thiết kế
+LOGIN_06,Mật khẩu,Nhập mật khẩu hợp lệ,Đang ở màn hình đăng nhập,Nhập mật khẩu,Abc@123456,Mật khẩu được che bằng ký tự dấu chấm hoặc dấu sao
+LOGIN_07,Mật khẩu,Bỏ trống mật khẩu,Đang ở màn hình đăng nhập,"Nhập email, để trống mật khẩu, bấm Đăng nhập",Mật khẩu trống,Hiển thị cảnh báo bắt buộc nhập mật khẩu
+LOGIN_08,Mật khẩu,Kiểm tra nút hiện/ẩn mật khẩu,Đang nhập mật khẩu,Bấm biểu tượng con mắt,Abc@123456,Mật khẩu chuyển từ dạng ẩn sang dạng hiển thị; bấm lại sẽ ẩn
+LOGIN_09,Đăng nhập,Đăng nhập với tài khoản hợp lệ,Tài khoản đã tồn tại,"Nhập email, mật khẩu đúng, bấm Đăng nhập",Email + mật khẩu đúng,"Đăng nhập thành công, chuyển đến trang chủ"
+LOGIN_10,Đăng nhập,Đăng nhập với mật khẩu sai,Tài khoản đã tồn tại,"Nhập email đúng, mật khẩu sai, bấm Đăng nhập",user@example.com / sai mật khẩu,Hiển thị thông báo đăng nhập thất bại
+LOGIN_11,Đăng nhập,Đăng nhập với email chưa đăng ký,Không có tài khoản tương ứng,Nhập email chưa đăng ký và mật khẩu bất kỳ,notfound@gmail.com,Hiển thị thông báo tài khoản không tồn tại hoặc thông tin đăng nhập không đúng
+LOGIN_12,Đăng nhập,Nhấn Enter để đăng nhập,Đã nhập đủ email và mật khẩu,Nhấn phím Enter,Dữ liệu hợp lệ,Hệ thống thực hiện hành động đăng nhập
+LOGIN_13,Quên mật khẩu,Điều hướng khi bấm “Quên mật khẩu?”,Đang ở màn hình đăng nhập,Bấm link Quên mật khẩu,Không,Chuyển sang màn hình Quên mật khẩu
+LOGIN_14,Đăng ký,Điều hướng khi bấm “Đăng ký ngay”,Đang ở màn hình đăng nhập,Bấm link Đăng ký ngay,Không,Chuyển sang màn hình Đăng ký
+LOGIN_15,Gmail,Bấm nút “Đăng nhập bằng Gmail”,Đang ở màn hình đăng nhập,Bấm nút,Không,Chuyển sang luồng xác thực Google
+LOGIN_16,Gmail,Đăng nhập Gmail thành công,Có tài khoản Google hợp lệ,Chọn tài khoản Google hợp lệ,Tài khoản Gmail,"Đăng nhập thành công, chuyển tới trang chủ"
+LOGIN_17,Gmail,Hủy đăng nhập Gmail,Đang ở luồng Google OAuth,Bấm hủy,Không,"Quay về trang đăng nhập, không đăng nhập"
+LOGIN_18,Bảo mật,Mật khẩu không hiển thị mặc định,Đang ở màn hình đăng nhập,Nhập mật khẩu,Abc@123456,Mật khẩu bị che mặc định
+LOGIN_19,UI,Kiểm tra trạng thái hover/click nút Đăng nhập,Đang ở màn hình đăng nhập,"Di chuột, bấm nút",Không,"Nút có phản hồi giao diện đúng, không bị vỡ layout"
+LOGIN_20,Responsive,Hiển thị màn hình đăng nhập trên kích thước màn hình nhỏ,Truy cập bằng màn hình nhỏ,Thu nhỏ trình duyệt,Không,"Form vẫn hiển thị hợp lý, không chồng lấn nội dung"

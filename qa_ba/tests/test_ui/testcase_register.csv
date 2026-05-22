@@ -1,0 +1,25 @@
+﻿TC ID,Chức năng,Test case,Tiền điều kiện,Bước thực hiện,Dữ liệu test,Kết quả mong đợi
+REGISTER_01,Hiển thị giao diện,Kiểm tra đầy đủ thành phần màn hình đăng ký,Truy cập trang đăng ký,Mở trang,Không,"Hiển thị logo, tiêu đề Đăng ký, ô Họ và tên, Email, Mật khẩu, Xác nhận mật khẩu, nút Đăng ký, nút Đăng ký bằng Gmail, link Đăng nhập ngay"
+REGISTER_02,Họ tên,Nhập họ tên hợp lệ,Đang ở màn hình đăng ký,Nhập họ tên,Nguyễn Văn A,Giá trị được nhập thành công
+REGISTER_03,Họ tên,Bỏ trống họ tên,Đang ở màn hình đăng ký,"Để trống họ tên, nhập các trường khác, bấm Đăng ký",Trống,Hiển thị thông báo yêu cầu nhập họ tên
+REGISTER_04,Họ tên,Nhập họ tên chỉ chứa khoảng trắng,Đang ở màn hình đăng ký,"Nhập toàn khoảng trắng, bấm Đăng ký",""" """,Hiển thị lỗi dữ liệu không hợp lệ
+REGISTER_05,Họ tên,Nhập họ tên chứa ký tự đặc biệt,Đang ở màn hình đăng ký,"Nhập họ tên, bấm Đăng ký",@#$%^,Hệ thống xử lý theo rule; nên báo không hợp lệ nếu tên không cho phép
+REGISTER_06,Email,Nhập email hợp lệ,Đang ở màn hình đăng ký,Nhập email,abc@gmail.com,Email hiển thị đúng
+REGISTER_07,Email,Bỏ trống email,Đang ở màn hình đăng ký,"Để trống email, nhập các trường còn lại, bấm Đăng ký",Trống,Hiển thị cảnh báo bắt buộc nhập email
+REGISTER_08,Email,Nhập email sai định dạng,Đang ở màn hình đăng ký,Nhập email không đúng chuẩn,abcgmail.com,Hiển thị thông báo email không hợp lệ
+REGISTER_09,Email,Nhập email đã tồn tại,Hệ thống đã có email này,"Nhập email đã đăng ký, bấm Đăng ký",existing@gmail.com,Hiển thị thông báo email đã tồn tại
+REGISTER_10,Mật khẩu,Bỏ trống mật khẩu,Đang ở màn hình đăng ký,"Để trống mật khẩu, nhập trường khác, bấm Đăng ký",Trống,Hiển thị lỗi yêu cầu nhập mật khẩu
+REGISTER_11,Mật khẩu,Nhập mật khẩu hợp lệ,Đang ở màn hình đăng ký,Nhập mật khẩu,Abc@123456,"Nhập thành công, mặc định bị che"
+REGISTER_12,Mật khẩu,Kiểm tra nút hiện/ẩn mật khẩu,Có dữ liệu trong ô mật khẩu,Bấm icon mắt,Abc@123456,Mật khẩu hiển thị/ẩn đúng
+REGISTER_13,Xác nhận mật khẩu,Bỏ trống xác nhận mật khẩu,Đang ở màn hình đăng ký,"Nhập các trường khác, để trống xác nhận, bấm Đăng ký",Trống,Hiển thị thông báo yêu cầu xác nhận mật khẩu
+REGISTER_14,Xác nhận mật khẩu,Xác nhận mật khẩu khớp,Đang ở màn hình đăng ký,Nhập mật khẩu và xác nhận giống nhau,Abc@123456 / Abc@123456,Dữ liệu hợp lệ
+REGISTER_15,Xác nhận mật khẩu,Xác nhận mật khẩu không khớp,Đang ở màn hình đăng ký,"Nhập 2 mật khẩu khác nhau, bấm Đăng ký",Abc@123456 / Abc@12345,Hiển thị thông báo mật khẩu xác nhận không khớp
+REGISTER_16,Xác nhận mật khẩu,Kiểm tra icon hiện/ẩn mật khẩu xác nhận,Có dữ liệu trong ô xác nhận,Bấm biểu tượng con mắt,Abc@123456,Giá trị hiển thị/ẩn đúng
+REGISTER_17,Đăng ký,Đăng ký thành công với dữ liệu hợp lệ,Email chưa tồn tại,"Nhập toàn bộ dữ liệu hợp lệ, bấm Đăng ký","Họ tên, email mới, mật khẩu hợp lệ","Tạo tài khoản thành công, điều hướng theo thiết kế"
+REGISTER_18,Đăng ký,Bấm Đăng ký khi có trường không hợp lệ,Đang ở trang đăng ký,"Nhập thiếu/sai dữ liệu, bấm Đăng ký",Dữ liệu sai,"Không tạo tài khoản, hiển thị lỗi tương ứng"
+REGISTER_19,Đăng nhập,Bấm “Đăng nhập ngay”,Đang ở màn hình đăng ký,Bấm link,Không,Chuyển về màn hình đăng nhập
+REGISTER_20,Gmail,Bấm “Đăng ký bằng Gmail”,Đang ở màn hình đăng ký,Bấm nút Gmail,Không,Chuyển sang luồng xác thực Google
+REGISTER_21,Gmail,Đăng ký Gmail thành công,Google account chưa liên kết hệ thống,Xác thực với tài khoản Google,Gmail hợp lệ,Tạo tài khoản / đăng nhập thành công theo thiết kế
+REGISTER_22,Gmail,Hủy đăng ký Gmail,Đang ở màn hình Google OAuth,Bấm hủy,Không,Quay lại trang đăng ký
+REGISTER_23,UI,Kiểm tra trạng thái focus của các ô nhập,Đang ở trang đăng ký,Click từng ô nhập,Không,"Ô được focus đúng, không lỗi hiển thị"
+REGISTER_24,Responsive,Hiển thị trang đăng ký trên màn hình nhỏ,Thu nhỏ trình duyệt,Quan sát layout,Không,Form không bị vỡ giao diện

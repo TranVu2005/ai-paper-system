@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Database
+*.db
+*.sqlite3
+
+# Upload files
+uploads/
+backend/uploaded_files/*
+!backend/uploaded_files/.gitkeep
+
+# Local/generated data and artifacts
+data/processed/
+data/multimodal/
+data/raw_pdf/
+data/test/
+backend/data/
+ai_module/data/
+ai_module/models/
+ai_module/outputs/
+storage/backups/
+
+# Large package artifacts
+*.tar.gz
